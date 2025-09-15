@@ -1,0 +1,355 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #39594c 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .invitation-container {
+            background: white;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .invitation-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .botanical-decoration {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 400px;
+            background-image: url('../imagenes/hojas.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top right;
+            transform: rotate(-50deg);
+            z-index: 0;
+        }
+        
+        .botanical-decoration-1{
+            position: absolute;
+            left: -70px;                 /* entra desde fuera del borde izquierdo */
+            top: 75%;                    /* a mitad de altura aprox. */
+            transform: translateY(-50%) rotate(22deg);
+            width: 320px;
+            height: 260px;
+            background-image: url('../imagenes/hojas.png');
+            background-size: contain;    /* no recorta la imagen */
+            background-repeat: no-repeat;
+            background-position: center left;
+            pointer-events: none;        /* no tapa clics */
+            z-index: 0;                  /* por detrás del contenido */
+        }
+        .couple-names {
+            text-align: center;
+            margin-top: 250px;
+            margin-bottom: 30px;
+        }
+
+        .couple-names h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.0rem;
+            font-weight: 400;
+            color: #2c3e50;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .couple-names-2{
+            text-align: left;
+            margin-top: 60px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .couple-names-2 h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.0rem;
+            font-weight: 400;
+            color: #2c3e50;   /* mismo color */
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .couple-names-3{
+            text-align: center;
+            margin-top: 60px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+        .couple-names-3 h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.0rem;
+            font-weight: 400;
+            color: #2c3e50;   /* mismo color */
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .invitation-text {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        .invitation-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            font-style: italic;
+            font-weight: 300;
+            color: #2c3e50;
+        }
+
+        .invitation-text-2{
+            text-align: right;
+            color: #27292b;
+            margin-right: 20px;
+            margin-bottom: 5px;
+        }
+
+        .invitation-text-2 p {
+            font-size: 1rem;
+            line-height: 1.6;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .invitation-text-3{
+            text-align: center;
+            color: #27292b;
+            margin-right: 20px;
+            margin-bottom: 5px;
+        }
+
+        .invitation-text-3 p {
+            font-size: 1rem;
+            line-height: 1.6;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .itinerario{
+            text-align: right;
+            color: #35393b;
+            margin-right: 20px;
+            margin-bottom: 5px;
+        }
+
+        .itinerario p{
+            font-size: 0.8rem;
+            line-height: 1.6;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .event-details {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Línea arriba con el mes centrado */
+        .calendar-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .calendar-header::before,
+        .calendar-header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #ccc; /* línea gris */
+        }
+        .calendar-header .month-title {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #5a6c7a;
+        }
+
+        /* Cajas inferiores (manteniendo tu estilo actual) */
+        .calendar-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .calendar-item {
+            color: #5a6c7a;
+            padding: 20px 15px;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            width: 60px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .decorative-border {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(140, 180, 140, 0.3);
+            border-radius: 10px;
+        }
+
+        .location-button {
+        text-align: right;
+        margin-top: 5px;
+        }
+
+        .location-button a {
+            background-color: #476b5d;
+            padding: 5px 20px;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .location-button a:hover {
+            background-color: #39594c;
+            transform: scale(1.03);
+        }
+
+        /* Tablets y móviles grandes */
+    @media (max-width: 768px) {
+    body { padding: 16px; }
+
+    .invitation-container {
+        max-width: 420px;
+        padding: 40px 28px;
+    }
+
+    .botanical-decoration {
+        width: 230px;
+        height: 320px;
+        top: -24px;
+        right: -28px;
+        transform: rotate(-36deg);
+    }
+
+    .couple-names { margin-top: 120px; }
+    .couple-names h1 { font-size: 1.8rem; letter-spacing: 2px; }
+
+    .invitation-text p { font-size: 0.95rem; }
+
+    /* calendario en una fila, más compacto */
+    .calendar-box {
+        gap: 8px;
+        margin-bottom: 16px;
+        flex-wrap: nowrap;
+    }
+    .calendar-item {
+        width: 56px;
+        padding: 14px 12px;
+        font-size: 1.25rem;
+    }
+
+    .event-details { margin-bottom: 72px; }
+    }
+
+    /* Móviles (≤ 480px) */
+    @media (max-width: 480px) {
+    .invitation-container {
+        max-width: 360px;
+        padding: 32px 22px;
+    }
+
+    .botanical-decoration {
+        width: 190px;
+        height: 270px;
+        top: -16px;
+        right: -18px;
+        transform: rotate(-30deg);
+    }
+
+    .couple-names { margin-top: 90px; }
+    .couple-names h1 { font-size: 1.6rem; letter-spacing: 1px; }
+
+    .invitation-text p { font-size: 0.9rem; }
+
+    .calendar-item {
+        width: 52px;
+        padding: 12px 10px;
+        font-size: 1.15rem;
+    }
+
+    .event-details { margin-bottom: 56px; }
+    }
+
+    /* Móviles muy chicos (≤ 360px) */
+    @media (max-width: 360px) {
+    .invitation-container { padding: 26px 18px; }
+
+    .botanical-decoration {
+        width: 170px;
+        height: 240px;
+        top: -12px;
+        right: -12px;
+    }
+
+    .couple-names { margin-top: 72px; }
+    .couple-names h1 { font-size: 1.45rem; }
+
+    .calendar-item {
+        width: 48px;
+        padding: 10px 8px;
+        font-size: 1.05rem;
+    }
+
+    .event-details { margin-bottom: 44px; }
+    }
+
+        /* Animation para entrada suave */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .invitation-container {
+            animation: fadeInUp 1s ease-out;
+        }
